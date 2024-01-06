@@ -7,7 +7,7 @@ import { NextResponse } from "next/server";
 
 // To handle a GET request to /api
 export async function GET(request: Request) {
-  const blog = await Blog.find({status:'published'}).sort({ publishedAt: -1 });
+  const blog = await Blog.find({status:'published'});
 
   return NextResponse.json({ data: blog }, { status: 200 });
 }
