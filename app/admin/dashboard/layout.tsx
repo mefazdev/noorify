@@ -10,9 +10,9 @@ export default function DashboardLayout({
     return (
       <section>
        
-       <Navbar/>
+       {/* <Navbar/>
    
-        {children}
+        {children} */}
       </section>
     )
   }

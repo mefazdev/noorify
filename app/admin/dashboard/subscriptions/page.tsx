@@ -15,7 +15,7 @@ export default function page() {
     <div className="px-5 lg:px-0 lg:w-10/12 m-auto mt-12">
       <h4 className="text-2xl font-bold">Subscriptions</h4>
      
-   <Component/>
+   {/* <Component/> */}
     </div>
   </div>
     )

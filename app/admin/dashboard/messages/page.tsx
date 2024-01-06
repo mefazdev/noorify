@@ -9,7 +9,7 @@ export default function page() {
   if (adminUser ?.value === "true") {
     return(
     <div>
-     <Component/>
+     {/* <Component/> */}
     </div>
   )}else{
     redirect('/admin/Login')
