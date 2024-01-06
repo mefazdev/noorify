@@ -66,7 +66,7 @@ export default function Component() {
           },
           body: JSON.stringify({
             // isPublished: false,
-            status:'published'
+            status:'unpublished'
           }),
         }
       );
