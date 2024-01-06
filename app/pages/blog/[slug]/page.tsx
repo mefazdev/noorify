@@ -84,13 +84,13 @@ export default async function page({ params }: { params: { slug: string } }) {
   );
 }
 
-export async function generateStaticParams() {
-  const posts = await fetch(
-    `${process.env.NEXT_PUBLIC_PORT}/api/publishedBlog`,
-    {}
-  ).then((res) => res.json());
+// export async function generateStaticParams() {
+//   const posts = await fetch(
+//     `${process.env.NEXT_PUBLIC_PORT}/api/publishedBlog`,
+//     {}
+//   ).then((res) => res.json());
  
-  return posts?.data?.map((post: any) => ({
-    slug: post.slug,
-  }));
-}
+//   return posts?.data?.map((post: any) => ({
+//     slug: post.slug,
+//   }));
+// }
