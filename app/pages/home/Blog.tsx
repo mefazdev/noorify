@@ -8,7 +8,7 @@ export default function Blog() {
   const [data, setData] = useState<any[]>([]);
   const getData = async () => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/publishedBlog`, {});
+      const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/blog`, {});
       const { data } = await res.json();
       setData(data);
     } catch (error) {
