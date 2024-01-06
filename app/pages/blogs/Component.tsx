@@ -9,7 +9,7 @@ export default function Component() {
   const getData = async () => {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_PORT}/api/blog`,
+        `${process.env.NEXT_PUBLIC_PORT}/api/publishedBlog`,
         {}
       );
       const { data } = await res.json();
