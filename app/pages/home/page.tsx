@@ -18,18 +18,18 @@ export default function HomePage() {
  
   return (
     <div className='scroll-smooth'>
-      {/* <Navbar/>
+      <Navbar/>
          <Hero/> 
      <About/>
     <Courses/>
     <Milestone/>  
     <Feedback/>  
-    <RegisterNow/>   */}
+    <RegisterNow/>  
     <Blog/>
      
-    {/* <NewLetter/>  
+    <NewLetter/>  
 
-    <Footer/> */}
+    <Footer/>
     </div>
   )
 }

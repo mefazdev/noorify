@@ -13,11 +13,8 @@ const blogSchema = new mongoose.Schema({
   image: {
     type: String,
   },
-  // isPublished:{
-  // type:Boolean
-  // },
-  status:{
-    type:String
+  isPublished:{
+  type:Boolean
   },
   createdAt: {
     type: String,

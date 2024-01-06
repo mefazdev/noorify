@@ -12,7 +12,7 @@ export default function page() {
     return(
  
     <div>
-      {/* <Component/> */}
+      <Component/>
     </div>
   )}else{
     redirect('/admin/Login')

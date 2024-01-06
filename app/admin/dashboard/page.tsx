@@ -8,7 +8,7 @@ export default function page() {
   if (adminUser ?.value === "true") {
   return (
     <div>
-      {/* <div className="px-5 lg:px-0 lg:w-10/12 m-auto mt-12">
+      <div className="px-5 lg:px-0 lg:w-10/12 m-auto mt-12">
         <h4 className="text-2xl font-bold text-center">DASHBOARD</h4>
  
         <div className="mt-16 grid grid-cols-2 gap-7 lg:w-8/12 m-auto">
@@ -52,7 +52,7 @@ export default function page() {
             </div>
           </div></Link>
         </div>
-      </div> */}
+      </div>
     </div>
   );}else{
     redirect('/admin/Login')
