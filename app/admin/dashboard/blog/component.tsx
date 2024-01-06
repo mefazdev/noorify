@@ -38,7 +38,8 @@ export default function Component() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            isPublished: true,
+            // isPublished: true,
+            status:'published',
             publishedAt: new Date(),
           }),
         }
@@ -64,7 +65,8 @@ export default function Component() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            isPublished: false,
+            // isPublished: false,
+            status:'published'
           }),
         }
       );
@@ -155,7 +157,7 @@ export default function Component() {
                       )}
                     </div>
                   </div>
-                  {d?.isPublished ? (
+                  {d?.status === 'published' ? (
                     <button
                       onClick={() => unPublishBlog(d?._id)}
                       className="bg-emerald-400 text-white p-2 w-full rounded mt-8"

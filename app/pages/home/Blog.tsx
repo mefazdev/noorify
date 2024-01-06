@@ -8,7 +8,7 @@ export default function Blog() {
   const [data, setData] = useState<any[]>([]);
   const getData = async () => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/blog`, {});
+      const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/publishedBlog`, {});
       const { data } = await res.json();
       setData(data);
     } catch (error) {
@@ -31,8 +31,7 @@ export default function Blog() {
             const publishedAt = formatDate(new Date(d?.publishedAt));
            
         
-            if(i < 3 && d?.isPublished){
-              
+            if(i < 3){
               return (
                 <div key={i} className="p-4  w-full shadow-lg rounded-md  hover:-translate-y-3 transition ease-linear duration-150">
                   <div
