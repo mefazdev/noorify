@@ -1,0 +1,43 @@
+.v{
+    background-color: rgba(0, 0, 0, 0.863);
+}
+
+ 
+  .phone__input input{
+   margin-top: 10px;
+   outline:none;
+   position: absolute;
+   top:0;
+   /* right: 0; */
+   
+   /* width: 100%; */
+   max-width: 75%;
+   padding: 5px;
+   margin-left: 70px;
+   padding-left: 0px;
+   /* border: saddlebrown solid; */
+  
+  }
+  .phone__input  img{
+    max-width: 30px;
+    margin-top: -20px;
+    
+  }
+  .phone__input  select {
+ outline: none;
+ margin-left: 40px;
+ max-width: 15px; 
+ 
+ /* border:solid red */
+  }
+
+
+  @import '../../../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css';
+  @import '../../../node_modules/@syncfusion/ej2-icons/styles/bootstrap5.css';
+  @import '../../../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css';
+  @import '../../../node_modules/@syncfusion/ej2-splitbuttons/styles/bootstrap5.css';
+  @import '../../../node_modules/@syncfusion/ej2-inputs/styles/bootstrap5.css';
+  @import '../../../node_modules/@syncfusion/ej2-lists/styles/bootstrap5.css';
+  @import '../../../node_modules/@syncfusion/ej2-navigations/styles/bootstrap5.css';
+  @import '../../../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.css';
+  @import '../../../node_modules/@syncfusion/ej2-richtexteditor/styles/bootstrap5.css'  
