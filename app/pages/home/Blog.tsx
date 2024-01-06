@@ -31,7 +31,8 @@ export default function Blog() {
             const publishedAt = formatDate(new Date(d?.publishedAt));
            
         
-            if(i < 3){
+            if(i < 3 && d?.isPublished){
+              
               return (
                 <div key={i} className="p-4  w-full shadow-lg rounded-md  hover:-translate-y-3 transition ease-linear duration-150">
                   <div
