@@ -156,40 +156,43 @@ export default function Component() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                   />
-                  <TextField
-                    className="mt-6"
-                    fullWidth
-                    id="outlined-basic"
-                    label="Email"
-                    variant="outlined"
-                    error={!email && nullemail ? true : false}
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                  <TextField
-                    className="mt-6"
-                    fullWidth
-                    id="outlined-basic"
-                    label="Subject"
-                    variant="outlined"
-                    type="text"
-                    error={!subject && nullsubject ? true : false}
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                  />
-                  <TextField
-                    className="mt-6"
-                    multiline
-                    rows={3}
-                    fullWidth
-                    type="text"
-                    id="outlined-basic"
-                    label="Message"
-                    variant="outlined"
-                    error={!message && nullmessage ? true : false}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                  />
+                  <div className="mt-6"><TextField
+                  
+                  fullWidth
+                  id="outlined-basic"
+                  label="Email"
+                  variant="outlined"
+                  error={!email && nullemail ? true : false}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                /></div>
+                  
+                    <div className="mt-6"><TextField
+                  
+                  fullWidth
+                  id="outlined-basic"
+                  label="Subject"
+                  variant="outlined"
+                  type="text"
+                  error={!subject && nullsubject ? true : false}
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                /></div>
+                  
+                    <div className="mt-6"> <TextField
+                  
+                  multiline
+                  rows={3}
+                  fullWidth
+                  type="text"
+                  id="outlined-basic"
+                  label="Message"
+                  variant="outlined"
+                  error={!message && nullmessage ? true : false}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                /></div>
+                 
 
                   <button
                     className="bg-emerald-500 text-white w-full mt-4 p-3 hover:scale-105 transition ease-linear"

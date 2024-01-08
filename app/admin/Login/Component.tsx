@@ -90,8 +90,8 @@ export default function Component() {
           error={wrong}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <TextField
-          className="mt-5"
+        <div className="mt-5"><TextField
+          
           fullWidth
           id="outlined-basic"
           label="Password"
@@ -101,7 +101,8 @@ export default function Component() {
           error={wrong}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-        />
+        /> </div>
+        
         <button
           onClick={() => setShowPw(!showPw)}
           className="text-right mt-1 text-sm   float-right"

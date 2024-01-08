@@ -176,7 +176,7 @@ export default function Courses() {
                       </p>
 
                       {/* <Link href={`/pages/course?data=${data}`}> */}
-                      <Link href={`/pages/course/${d?.slug}`}>
+                      <Link href={`/pages/course/${d?.slug}/${d?.description}`}>
                         <button className="text-white  bg-emerald-500 p-1 px-3 rounded   text-sm w-fit mt-8 transition ease-in  duration-300   group-hover:-translate-y-6">
                           More Info
                         </button>
