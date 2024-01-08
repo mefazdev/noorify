@@ -11,7 +11,7 @@ export async function generateMetadata({
     title:
       params?.slug[0]?.toUpperCase()?.replace(/-/g, " ") +
       " | Noorifiy Online Academy",
-    description: params?.slug[1].replace(/%20/g, " "),
+     description: params?.slug[1].replace(/%20/g, " ").replace(/%2c/g, ','),
   };
 }
 export default async function page({ params }: { params: { slug: string } }) {
