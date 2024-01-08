@@ -10,7 +10,7 @@ import {
   TableRow,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import RichTextEditor from "react-rte";
+
 export default function Component() {
   const [data, setData] = useState<any[]>([]);
 

@@ -14,7 +14,6 @@ async function getData(slug: any) {
   return res.json();
 }
 
-
 type Props = {
   params: { slug: string };
   searchParams: { [key: string]: string | string[] | undefined };
@@ -39,7 +38,7 @@ export async function generateMetadata(
   return {
     title: post.title,
     openGraph: {
-      images: ["/some-specific-page-image.jpg", ...previousImages],
+      images: [post?.image, ...previousImages],
     },
   };
 }
@@ -49,7 +48,6 @@ export default async function page({ params }: { params: { slug: string } }) {
   const post = data?.data[0];
   const publishedAt = formatDate(new Date(post?.publishedAt));
 
-  
   return (
     <div className="px-4 lg:px-0 lg:w-11/12 m-auto pt-6 lg:pt-12 pb-28 border-b">
       <div className="bg-gray-50  rounded-xl lg:rounded-xl py-2   lg:py-5 relative shadow-sm ">
@@ -57,7 +55,7 @@ export default async function page({ params }: { params: { slug: string } }) {
           <p>Home / Blog</p>
         </div>
 
-        <h2   className="text-center  text-xl lg:text-3xl text-gray-600 font-bold">
+        <h2 className="text-center  text-xl lg:text-3xl text-gray-600 font-bold">
           Blog
         </h2>
       </div>
@@ -89,7 +87,7 @@ export default async function page({ params }: { params: { slug: string } }) {
 //     `${process.env.NEXT_PUBLIC_PORT}/api/publishedBlog`,
 //     {}
 //   ).then((res) => res.json());
- 
+
 //   return posts?.data?.map((post: any) => ({
 //     slug: post.slug,
 //   }));

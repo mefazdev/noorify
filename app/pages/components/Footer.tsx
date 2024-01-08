@@ -2,7 +2,6 @@ import React from "react";
 import {
   FaFacebook,
   FaInstagram,
-  FaLinkedin,
   FaTiktok,
   FaWhatsapp,
   FaXTwitter,
@@ -12,7 +11,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { IoMdBusiness } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import Link from "next/link";
-import logo from '../../assets/images/logo.jpeg'
+import logo from "../../assets/images/logo.jpeg";
 import Image from "next/image";
 export default function Footer() {
   return (
@@ -31,18 +30,19 @@ export default function Footer() {
             </p>
 
             <div className="mt-3 flex">
-            <a
-                href=""
-                target="_blank"
-              ><div className="bg-emerald-500 text-white border border-emerald-500  p-1.5 rounded w-fit hover:-translate-y-1 transition ease-in duration-100 hover:scale-105">
-                <FaYoutube className="text-lg" />
-              </div></a>
+              <a href="" target="_blank">
+                <div className="bg-emerald-500 text-white border border-emerald-500  p-1.5 rounded w-fit hover:-translate-y-1 transition ease-in duration-100 hover:scale-105">
+                  <FaYoutube className="text-lg" />
+                </div>
+              </a>
               <a
                 href="https://www.facebook.com/profile.php?id=100091635135740&mibextid=ZbWKwL"
                 target="_blank"
-              ><div className="ml-2 bg-emerald-500 text-white border border-emerald-500  p-1.5 rounded w-fit hover:-translate-y-1 transition ease-in duration-100 hover:scale-105">
-                <FaFacebook className="text-lg" />
-              </div></a>
+              >
+                <div className="ml-2 bg-emerald-500 text-white border border-emerald-500  p-1.5 rounded w-fit hover:-translate-y-1 transition ease-in duration-100 hover:scale-105">
+                  <FaFacebook className="text-lg" />
+                </div>
+              </a>
               <a
                 href="https://www.instagram.com/noorifymadrasa?igsh=OGQ5ZDc2ODk2ZA=="
                 target="_blank"
@@ -51,10 +51,7 @@ export default function Footer() {
                   <FaInstagram className="text-lg" />
                 </div>
               </a>
-              <a
-                href=""
-                target="_blank"
-              >
+              <a href="" target="_blank">
                 <div className="ml-2 bg-emerald-500 text-white border border-emerald-500  p-1.5 rounded w-fit hover:-translate-y-1 transition ease-in duration-100 hover:scale-105">
                   <FaXTwitter className="text-lg" />
                 </div>
@@ -138,7 +135,11 @@ export default function Footer() {
           </div>
           <div className="m-auto">
             <div className="w-10/12 hidden lg:grid">
-              <Image src={logo} alt="Best online Hifz Course, Tajweed Course, Quran Classes, Noorify Quran Class,GCC Quran Learning,Global Quran Academy" className="rounded" />
+              <Image
+                src={logo}
+                alt="Best online Hifz Course, Tajweed Course, Quran Classes, Noorify Quran Class,GCC Quran Learning,Global Quran Academy"
+                className="rounded"
+              />
             </div>
             {/* <p className="text-emerald-500 font-bold text-3xl">LOGO</p> */}
           </div>
@@ -149,9 +150,11 @@ export default function Footer() {
         <div className="px-5 md:px-0 md:w-10/12 m-auto lg:flex">
           <p className="text-sm">© Noorify 2023. All Rights reserved</p>
           <a
-                href="whatsapp://send?phone=+918606256402"
-                data-action="share/whatsapp/share"
-              ><p className="text-sm lg:ml-10">Developed by Booreact</p></a>
+            href="whatsapp://send?phone=+918606256402"
+            data-action="share/whatsapp/share"
+          >
+            <p className="text-sm lg:ml-10">Developed by Booreact</p>
+          </a>
         </div>
       </div>
     </div>

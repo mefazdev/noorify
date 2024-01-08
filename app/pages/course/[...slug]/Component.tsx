@@ -1,19 +1,18 @@
 "use client";
 import React from "react";
- 
-import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { courses } from "../../../assets/courses";
 
-
-export default function Component() {
-  const searchParams = useSearchParams();
-  const data = searchParams.get("data");
-  const d = data ? JSON.parse(data) : "";
+export default function Component({ slug }: any) {
+  function getObjectByName(slug: string) {
+    return courses.find((item) => item.slug === slug);
+  }
+  const d = getObjectByName(slug);
   return (
     <div className="px-5 lg:px-0 lg:w-10/12 m-auto">
       <div className="w-fit">
         <h1 className="text-cente text-xl lg:text-3xl text-emerald-500 font-semibold">
-          {d.name}
+          {d?.name}
         </h1>
         <div className="border-t w-11/12 m-auto  mt-1 border-gray-600"></div>
       </div>
@@ -23,12 +22,12 @@ export default function Component() {
           <div
             className=" h-56 lg:h-72 rounded-lg shadow-lg"
             style={{
-              backgroundImage: `url(${d.image})`,
+              backgroundImage: `url(${d?.image})`,
               backgroundSize: "cover",
             }}
           ></div>
           <div className="shadow-md p-3 mt-3 rounded-lg">
-            <p className="">{d.description}</p>
+            <p className="">{d?.description}</p>
           </div>
         </div>
 
@@ -50,7 +49,6 @@ export default function Component() {
             <a
               href="whatsapp://send?phone=+971556923201"
               data-action="share/whatsapp/share"
-              
             >
               <button className="m-auto w-full  border border-emerald-500 p-1.5 rounded-md px-4 shadow-sm hover:-translate-y-1 transition ease-in duration-150 hover:scale-105">
                 Get A Free Demo

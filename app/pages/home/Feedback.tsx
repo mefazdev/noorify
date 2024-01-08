@@ -1,17 +1,13 @@
 "use client";
 import {
   Alert,
-  AlertTitle,
   Button,
   Dialog,
   DialogActions,
   DialogContent,
-  DialogContentText,
-  DialogTitle,
   IconButton,
   TextField,
 } from "@mui/material";
-
 import React, { useState } from "react";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import Carousel from "react-material-ui-carousel";

@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
- 
+
 import madrasaE from "../../assets/images/courses/online-madrasa-english.jpg";
 import madrasaM from "../../assets/images/courses/online-madrasa-malayalam.jpg";
-import hifz from '../../assets/images/courses/hifz.jpg'
-import tajweed from '../../assets/images/courses/thajweed.jpg'
-import ladies from '../../assets/images/courses/ladies.jpg'
- 
+import hifz from "../../assets/images/courses/hifz.jpg";
+import tajweed from "../../assets/images/courses/thajweed.jpg";
+import ladies from "../../assets/images/courses/ladies.jpg";
+
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
 import Link from "next/link";
@@ -34,6 +34,7 @@ export default function Courses() {
   const data = [
     {
       name: "Madrasa (English)",
+      slug: "madrasa-english",
       description:
         "Free book delivery, expert teachers, individual attention, fun-oriented curriculum, convenient time slots, free demo",
       image: madrasaE.src,
@@ -52,6 +53,7 @@ export default function Courses() {
     },
     {
       name: "Madrasa (Malayalam)",
+      slug: "madrasa-malayalam",
       description:
         "Free book delivery, expert teachers, individual attention, fun-oriented curriculum, convenient time slots, free demo.",
       image: madrasaM.src,
@@ -66,13 +68,12 @@ export default function Courses() {
         "Fun-oriented Curriculam",
         "Convenient Time Slots",
         "Free Demo",
-        
       ],
-     
     },
-    
+
     {
       name: "Hifz Course",
+      slug: "hifz-course",
       description:
         "Specialized program for the memorization of the Holy Quran with personalized guidance",
       image: hifz.src,
@@ -91,12 +92,13 @@ export default function Courses() {
     },
     {
       name: "Tajweed Course",
+      slug: "tajweed-course",
       description:
         "In-depth study focusing on the proper pronunciation and recitation of Quranic verses.",
       image: tajweed.src,
       level: "All Level",
       // keyWord:'Best Tajweed Course Online, Quran Classes, Noorify Quran Class,GCC Quran Learning,Global Quran Academy,Global Online quran, Online Tajweed,Lady quran teacher ',
-    
+
       features: [
         "For  All Ages",
         "Personalized 1:1 sessions",
@@ -111,13 +113,14 @@ export default function Courses() {
 
     {
       name: "Ladies Course",
+      slug: "ladies-course",
       description:
         "Tailored classes designed exclusively for female learners, providing a comfortable and inclusive learning environment.",
       image: ladies.src,
       level: "All Level",
-    
+
       // keyWord:'Best Islamic ladies course online,Lady quran teacher, Best Online islamic academy, Expert Lady Quran Teacher ',
-    
+
       features: [
         "For  All Ages",
         "Personalized 1:1 sessions",
@@ -129,10 +132,6 @@ export default function Courses() {
         "100% Refund Guarantee",
       ],
     },
-     
-     
-    
-     
   ];
   return (
     <div className=" px-4 md:px-0 md:w-10/12 m-auto  pt-10 md:pt-20">
@@ -150,57 +149,52 @@ export default function Courses() {
           infinite={true}
           keyBoardControl={true}
           transitionDuration={500}
-             removeArrowOnDeviceType={["tablet", "mobile"]}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
           dotListClass="custom-dot-list-style"
-          >
-
-          {data?.map((d,i)=>{
-            const data = JSON.stringify(d)
-            return(
-<div key={i} className="p-3 lg:p-4 mb-10 lg:mb-20  m-auto lg:w-11/12   shadow-lg rounded-md group">
-            <div
-              className="w-full h-60 rounded-md relative"
-              style={{
-                backgroundImage: `url(${d.image})`,
-                backgroundSize: "cover",
-              }}
-            >
+        >
+          {data?.map((d, i) => {
+            const data = JSON.stringify(d);
+            return (
               <div
-                style={{ background: "rgba(0, 0, 0, 0.68)" }}
-                className="h-full flex items-center invisible group-hover:visible rounded-md p-6 pt-7 text-md  "
+                key={i}
+                className="p-3 lg:p-4 mb-10 lg:mb-20  m-auto lg:w-11/12   shadow-lg rounded-md group"
               >
-                <div className="">
-                  <p className="text-white  -ml-3 transition ease-in  duration-300   group-hover:translate-x-2  ">
-                  {d.description}       </p>
+                <div
+                  className="w-full h-60 rounded-md relative"
+                  style={{
+                    backgroundImage: `url(${d.image})`,
+                    backgroundSize: "cover",
+                  }}
+                >
+                  <div
+                    style={{ background: "rgba(0, 0, 0, 0.68)" }}
+                    className="h-full flex items-center invisible group-hover:visible rounded-md p-6 pt-7 text-md  "
+                  >
+                    <div className="">
+                      <p className="text-white  -ml-3 transition ease-in  duration-300   group-hover:translate-x-2  ">
+                        {d.description}{" "}
+                      </p>
 
-                  <Link href={`/pages/course?data=${data}`}>
-                     <button className="text-white  bg-emerald-500 p-1 px-3 rounded   text-sm w-fit mt-8 transition ease-in  duration-300   group-hover:-translate-y-6">
-                    More Info
-                  </button></Link>
+                      {/* <Link href={`/pages/course?data=${data}`}> */}
+                      <Link href={`/pages/course/${d?.slug}`}>
+                        <button className="text-white  bg-emerald-500 p-1 px-3 rounded   text-sm w-fit mt-8 transition ease-in  duration-300   group-hover:-translate-y-6">
+                          More Info
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-3 flex justify-between">
+                  <h4 className="text-lg font-semibold">{d.name} </h4>
+                  <div className="bg-emerald-500 text-white p-1 px-2.5 rounded-lg ">
+                    <p className="text-sm">{d.level}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="mt-3 flex justify-between">
-              <h4 className="text-lg font-semibold">{d.name} </h4>
-              <div className="bg-emerald-500 text-white p-1 px-2.5 rounded-lg ">
-                <p className="text-sm">{d.level}</p>
-              </div>
-            </div>
-          </div>
-            )
+            );
           })}
-          
-          
-
-
-           
-
-          
-       
         </Carousel>
       </div>
-
-      
     </div>
   );
 }

@@ -3,6 +3,12 @@ import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import {cookies} from "next/headers";
 import { redirect } from "next/navigation";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Dashboard | Admin",
+  robots:'noindex,nofollow'
+  
+  };
 export default function page() {
   const adminUser = cookies().get("adminUser")
   if (adminUser ?.value === "true") {

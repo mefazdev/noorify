@@ -2,7 +2,6 @@
 import formatDate from "@/app/functions/formatDate";
 import { storage } from "@/firebase";
 import { deleteObject, ref } from "firebase/storage";
-
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
@@ -11,7 +10,7 @@ export default function Component() {
   const [publishing, setPublishing] = useState<boolean>(false);
   const [unPublishing, setUnPublishing] = useState<boolean>(false);
   const [deleting, setDeleting] = useState<boolean>(false);
-  
+
   const getData = async () => {
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/blog`, {});
@@ -77,36 +76,30 @@ export default function Component() {
     }
   };
 
-  const delBlog = async (_id:any)=>{
-    setDeleting(true)
+  const delBlog = async (_id: any) => {
+    setDeleting(true);
     try {
-      await fetch(
-        `${process.env.NEXT_PUBLIC_PORT}/api/blog/${_id}`,
-        {
-          method: "DELETE",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/blog/${_id}`, {
+        method: "DELETE",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
 
-     
-
-      setDeleting(false)
-      deleteImg(_id)
-      getData()
+      setDeleting(false);
+      deleteImg(_id);
+      getData();
     } catch (error) {
-      setDeleting(false)
-     alert(error);
+      setDeleting(false);
+      alert(error);
     }
-  }
+  };
 
-  const deleteImg = (_id:any)=>{
+  const deleteImg = (_id: any) => {
     const imgRef = ref(storage, `photo/${_id}`);
-    deleteObject(imgRef)
-    
-  }
+    deleteObject(imgRef);
+  };
   return (
     <div className="px-5 lg:px-0 lg:w-10/12 m-auto mt-12">
       <div className="flex justify-between">
@@ -123,11 +116,7 @@ export default function Component() {
           const createdAt = formatDate(new Date(d?.createdAt));
           const publishedAt = formatDate(new Date(d?.publishedAt));
           return (
-            <div
-              key={i}
-              className="border  mt-10 p-4 lg:p-10"
-            >
-               
+            <div key={i} className="border  mt-10 p-4 lg:p-10">
               <div className="grid gap-7 lg:grid-cols-2 ">
                 <img width={300} src={d?.image} alt={d?.image} />{" "}
                 <div>
@@ -173,14 +162,20 @@ export default function Component() {
                   {/* <Link href={`/admin/dashboard/blog/edit/${d?._id}`}><button className="bg-blue-500 text-white p-2 w-full rounded mt-8">
                 Edit
               </button></Link> */}
-                  <button onClick={()=>delBlog(d?._id)} className="bg-red-500 text-white p-2 w-full rounded mt-8">
-                 {deleting? 'Deleting...' : 'Delete'}
+                  <button
+                    onClick={() => delBlog(d?._id)}
+                    className="bg-red-500 text-white p-2 w-full rounded mt-8"
+                  >
+                    {deleting ? "Deleting..." : "Delete"}
                   </button>
                 </div>
               </div>
               <div className="max-h-64 overflow-scroll overflow-x-hidden mt-4">
                 <h1 className="text-xl font-bold mt-6">{d?.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: d?.content }} className="mt-2"/>
+                <div
+                  dangerouslySetInnerHTML={{ __html: d?.content }}
+                  className="mt-2"
+                />
               </div>
             </div>
           );

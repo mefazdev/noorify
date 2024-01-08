@@ -1,47 +1,40 @@
 "use client";
- 
-import {
- 
-  TextField,
-} from "@mui/material";
-import React, { useEffect, useReducer, useState } from "react";
- 
+import { TextField } from "@mui/material";
+import React, { useState } from "react";
 import { storage } from "../../../../../firebase";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 import { useRouter } from "next/navigation";
 
-import { HtmlEditor, Image, Inject, Link, QuickToolbar, RichTextEditorComponent, Toolbar } from '@syncfusion/ej2-react-richtexteditor';
-
-
+import {
+  HtmlEditor,
+  Image,
+  Inject,
+  Link,
+  QuickToolbar,
+  RichTextEditorComponent,
+  Toolbar,
+} from "@syncfusion/ej2-react-richtexteditor";
 
 export default function Component() {
   const [title, setTitle] = useState("  ");
-  const [data, setData] = useState([]);
-  const [content, setContent] = useState("");
   const [img, setImg] = useState("");
-  const [uploading,setUploading] = useState(false)
-const [slug,setSlug] = useState('')
-const [v,setV] = useState('')
-  const router = useRouter()
-  // const [editorValue, setEditorValue] = React.useState(
-  //   RichTextEditor.createValueFromString(content, "html")
-  // );
-  const [editorValue, setEditorValue] = React.useState('')
+  const [uploading, setUploading] = useState(false);
+  const [slug, setSlug] = useState("");
+  const router = useRouter();
+  const [editorValue, setEditorValue] = React.useState("");
 
-  const handleTitle = (e)=>{
-setTitle(e.target.value)
-const value = e.target.value
-const text = value.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-const slug = text.replace(/^-+|-+$/g, '')
- 
-console.log(slug)
-setSlug(slug)
-  }
-  const handleChange = (value) => {
-    setEditorValue(value);
-    setContent(value.toString("html"));
-    // console.log(value.toString("html"));
+  const handleTitle = (e) => {
+    setTitle(e.target.value);
+    const value = e.target.value;
+    const text = value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    const slug = text.replace(/^-+|-+$/g, "");
+    setSlug(slug);
   };
+  // const handleChange = (value) => {
+  //   setEditorValue(value);
+  //   setContent(value.toString("html"));
+
+  // };
 
   const handleImg = (e) => {
     const reader = new FileReader();
@@ -55,43 +48,43 @@ setSlug(slug)
   };
 
   const uploadPhoto = async (_id) => {
-    
-      try {
-        const photoRef = ref(storage, `photo/${_id}`);
-        await uploadString(photoRef, img, "data_url").then(async (snapshot) => {
-          const downloadURL = await getDownloadURL(photoRef);
-           
-          try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/blog/${_id}`, {
+    try {
+      const photoRef = ref(storage, `photo/${_id}`);
+      await uploadString(photoRef, img, "data_url").then(async (snapshot) => {
+        const downloadURL = await getDownloadURL(photoRef);
+
+        try {
+          const res = await fetch(
+            `${process.env.NEXT_PUBLIC_PORT}/api/blog/${_id}`,
+            {
               method: "PUT",
               headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
               },
               body: JSON.stringify({
-                image:downloadURL
+                image: downloadURL,
               }),
-            });
-           
-         router.push('/admin/dashboard/blog')
-            setUploading(false)
-            setTitle('')
-            setImg('')
-            setContent('')
-            
-          } catch (error) {
-            setUploading(false)
-            alert(error)
-          }
-        });
-      } catch (error) {
-        alert(error)
-        setUploading(false)
-      }
-   
+            }
+          );
+
+          router.push("/admin/dashboard/blog");
+          setUploading(false);
+          setTitle("");
+          setImg("");
+          setContent("");
+        } catch (error) {
+          setUploading(false);
+          alert(error);
+        }
+      });
+    } catch (error) {
+      alert(error);
+      setUploading(false);
+    }
   };
-  const addBlog = async ()=>{
-    setUploading(true)
+  const addBlog = async () => {
+    setUploading(true);
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_PORT}/api/blog`, {
         method: "POST",
@@ -100,32 +93,23 @@ setSlug(slug)
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          title:title,
-          content:editorValue,
-          slug:slug,
+          title: title,
+          content: editorValue,
+          slug: slug,
           createdAt: new Date(),
         }),
       });
       const { data } = await res.json();
-      uploadPhoto(data?._id)
- 
-      
+      uploadPhoto(data?._id);
     } catch (error) {
-      setUploading(false)
-      alert(error)
+      setUploading(false);
+      alert(error);
     }
-  }
-
-
-  const p = ()=>{
-   const rtv = RichTextEditorComponent
-    // const s = rtv.getHtml()
-    console.log(editorValue)
-  }
+  };
 
   return (
     <div className="px-5 lg:px-0 lg:w-10/12 m-auto mt-12 pb-24">
-      <h4 className="text-2xl font-bold" onClick={(p)}>Create Blog</h4>
+      <h4 className="text-2xl font-bold">Create Blog</h4>
 
       <div className="mt-16">
         <div>
@@ -152,11 +136,13 @@ setSlug(slug)
               variant="filled"
              
             /> */}
-<RichTextEditorComponent      
-        change={(e) => setEditorValue(e.value)}>
-                     
-                    <Inject services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]} />
-                </RichTextEditorComponent>
+
+            {/*<<<<<<<<<<<<<<<<< RICHT TEXT EDITOR  >>>>>>>>>>>> */}
+            <RichTextEditorComponent change={(e) => setEditorValue(e.value)}>
+              <Inject
+                services={[Toolbar, Image, Link, HtmlEditor, QuickToolbar]}
+              />
+            </RichTextEditorComponent>
             <div className="mt-10 ">
               <p className="text-lg font-bold">Image</p>
               <div className="grid grid-cols-2 border p-5 mt-6">
@@ -183,16 +169,16 @@ setSlug(slug)
             </div>
 
             <div className="flex w-full mt-24">
-              <button onClick={addBlog} className="m-auto bg-green-500 p-2 w-4/12 text-white rounded">
-                {uploading? 'UPLOADING...' : 'UPLOAD'}
+              <button
+                onClick={addBlog}
+                className="m-auto bg-green-500 p-2 w-4/12 text-white rounded"
+              >
+                {uploading ? "UPLOADING..." : "UPLOAD"}
               </button>
             </div>
           </div>
         </div>
       </div>
-
-
-
     </div>
   );
 }

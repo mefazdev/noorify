@@ -118,28 +118,23 @@ export default function Milestone() {
             </div>
 
             <div className="grid px-5 lg:px-0 md:grid-cols-2  lg:grid-cols-4 gap-6 mt-16 md:mt-28">
-               
-                <div className="h-16   shadow-sm shadow-white rounded-full flex justify-center items-center hover:-translate-y-2 hover:scale-105 transition duration-200 ease-linear">
-                  <GiFaceToFace className="text-emerald-500 text-5xl " />
-                  <p className="text-white ml-3 text-lg">1:1 Sessions</p>
-               
+              <div className="h-16   shadow-sm shadow-white rounded-full flex justify-center items-center hover:-translate-y-2 hover:scale-105 transition duration-200 ease-linear">
+                <GiFaceToFace className="text-emerald-500 text-5xl " />
+                <p className="text-white ml-3 text-lg">1:1 Sessions</p>
               </div>
 
               <div className="h-16    shadow-sm shadow-white rounded-full flex justify-center items-center hover:-translate-y-2 hover:scale-105 transition duration-200 ease-linear">
-                  <HiComputerDesktop className="text-emerald-500 text-4xl " />
-                  <p className="text-white ml-3 text-lg">Free Demo Courses</p>
-               
+                <HiComputerDesktop className="text-emerald-500 text-4xl " />
+                <p className="text-white ml-3 text-lg">Free Demo Courses</p>
               </div>
               <div className="h-16   shadow-sm shadow-white rounded-full flex justify-center items-center hover:-translate-y-2 hover:scale-105 transition duration-200 ease-linear">
-                  <GrLanguage className="text-emerald-500 text-4xl " />
-                  <p className="text-white ml-3 text-lg">Global Access</p>
-               
+                <GrLanguage className="text-emerald-500 text-4xl " />
+                <p className="text-white ml-3 text-lg">Global Access</p>
               </div>
 
               <div className="h-16    shadow-sm shadow-white rounded-full flex justify-center items-center hover:-translate-y-2 hover:scale-105 transition duration-200 ease-linear">
-                  <FaFileInvoiceDollar className="text-emerald-500 text-4xl " />
-                  <p className="text-white ml-3 text-lg">100% Refund</p>
-               
+                <FaFileInvoiceDollar className="text-emerald-500 text-4xl " />
+                <p className="text-white ml-3 text-lg">100% Refund</p>
               </div>
             </div>
           </div>

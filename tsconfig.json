@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/route.js", "app/utils/dbConnect.js", "app/models/Register.tsx", "app/api/auth/login/route.js", "app/api/auth/route.js", "app/pages/contact/page.tsx", "app/my-mdx-page/page.mdx", "app/hello/page.mdx", "app/hello/page.js", "app/admin/dashboard/blog/create/component.js", "app/admin/dashboard/blog/create/page.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/route.js", "app/utils/dbConnect.js", "app/models/Register.tsx", "app/api/auth/login/route.js", "app/api/auth/route.js", "app/pages/contact/page.tsx", "app/my-mdx-page/page.mdx", "app/hello/page.mdx", "app/hello/page.js", "app/admin/dashboard/blog/create/component.js", "app/admin/dashboard/blog/create/page.tsx"],
   "exclude": ["node_modules"]
 }

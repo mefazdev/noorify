@@ -1,8 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import madrasa from "../../assets/images/courses/online-madrasa-malayalam.jpg";
 import hifz from "../../assets/images/courses/hifz.jpg";
-
 import ladies from "../../assets/images/courses/ladies.jpg";
 import prof from "../../assets/images/courses/professional.jpg";
 export default function Serve() {
@@ -33,7 +31,7 @@ export default function Serve() {
             </div>
             <p className="mt-2">
               Free book delivery, expert teachers, individual attention,
-              fun-oriented curriculum, convenient time slots, free demo 
+              fun-oriented curriculum, convenient time slots, free demo
             </p>
           </div>
         </div>
@@ -103,8 +101,8 @@ export default function Serve() {
               </div>
             </div>
             <p className="mt-2">
-              Tailored to Student&apos;s Needs, Language and Area-specific focus,
-              Customized Curriculam, Convenient Time Slots
+              Tailored to Student&apos;s Needs, Language and Area-specific
+              focus, Customized Curriculam, Convenient Time Slots
             </p>
           </div>
         </div>

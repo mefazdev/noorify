@@ -1,17 +1,21 @@
 import Component from "./component";
-import {cookies} from "next/headers";
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
- 
 
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Messages | Admin",
+  robots: "noindex,nofollow",
+};
 export default function page() {
-  
-  const adminUser = cookies().get("adminUser")
-  if (adminUser ?.value === "true") {
-    return(
-    <div>
-     <Component/>
-    </div>
-  )}else{
-    redirect('/admin/Login')
+  const adminUser = cookies().get("adminUser");
+  if (adminUser?.value === "true") {
+    return (
+      <div>
+        <Component />
+      </div>
+    );
+  } else {
+    redirect("/admin/Login");
   }
 }

@@ -25,9 +25,11 @@ export default function RegisterNow() {
             </h4>
 
             <div className="grid mt-8">
-            <Link href={'/pages/register'} className=" w-fit m-auto"><button className="font-sans   shadow-white bg-emerald-600 py-2 px-5 text-white m-auto hover:rounded hover:-translate-y-2 hover:scale-110 transition ease-linear duration-100">
-                REGISTER NOW
-              </button></Link>
+              <Link href={"/pages/register"} className=" w-fit m-auto">
+                <button className="font-sans   shadow-white bg-emerald-600 py-2 px-5 text-white m-auto hover:rounded hover:-translate-y-2 hover:scale-110 transition ease-linear duration-100">
+                  REGISTER NOW
+                </button>
+              </Link>
             </div>
           </div>
         </div>
