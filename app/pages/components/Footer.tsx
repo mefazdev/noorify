@@ -30,7 +30,7 @@ export default function Footer() {
             </p>
 
             <div className="mt-3 flex">
-              <a href="" target="_blank">
+              <a href="https://www.youtube.com/@NoorifyAcademy" target="_blank">
                 <div className="bg-emerald-500 text-white border border-emerald-500  p-1.5 rounded w-fit hover:-translate-y-1 transition ease-in duration-100 hover:scale-105">
                   <FaYoutube className="text-lg" />
                 </div>

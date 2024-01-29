@@ -52,7 +52,7 @@ export default function Hero() {
                     <FaXTwitter className="text-white text-sm" />
                   </div>
                 </a>
-                <a href="" target="_blank">
+                <a href="https://www.youtube.com/@NoorifyAcademy" target="_blank">
                   <div className="h-6 w-6  mt-2 bg-emerald-500 rounded-full flex justify-center items-center cursor-pointer hover:-translate-y-1 hover:scale-110 transition ease-linear duration-200">
                     <FaYoutube className="text-white text-sm" />
                   </div>
