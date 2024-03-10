@@ -72,7 +72,7 @@ export default function Component() {
           setUploading(false);
           setTitle("");
           setImg("");
-          setContent("");
+         
         } catch (error) {
           setUploading(false);
           alert(error);
