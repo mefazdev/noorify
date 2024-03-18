@@ -1,6 +1,9 @@
 import React from "react";
 import formatDate from "@/app/functions/formatDate";
 import type { Metadata, ResolvingMetadata } from "next";
+import Image from "next/image";
+import blogimg from '../../../assets/images/blog.jpg'
+import Link from "next/link";
 async function getData(slug: any) {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_PORT}/api/blog/view/${slug}`,
@@ -59,7 +62,8 @@ export default async function page({ params }: { params: { slug: string } }) {
           Blog
         </h2>
       </div>
-      <div className=" mt-10 lg:mt-24 lg:w-9/12 m-auto  ">
+      <div className=" mt-10 lg:mt-24 lg:w-9/12 m-auto grid lg:grid-cols-3 lg:gap-20">
+        <div className="lg:col-span-2">
         <h1 className="font-bold text-2xl text-center"> {post?.title}</h1>
         <h6 className="text-center mt-3 text-gray-600">
           {publishedAt} | Admin
@@ -77,7 +81,16 @@ export default async function page({ params }: { params: { slug: string } }) {
           dangerouslySetInnerHTML={{ __html: post?.content }}
           className="mt-10"
         />
-      </div>
+        </div>
+        <div className="mt-10">
+          <Image src={blogimg?.src} width={400} height={100} alt=""/>
+          <Link href={"/pages/register"}>
+                <button className="bg-emerald-500 w-full mt-1   p-1 px-3 rounded-sm text-white  hover:scale-105  transition ease-linear duration-100 cursor-poin">
+                  Register Now
+                </button>
+              </Link>
+        </div>
+      </div>    
     </div>
   );
 }
