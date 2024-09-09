@@ -43,7 +43,7 @@ export default function Hero() {
               style={{ marginLeft: "-420px" }}
               className="bg-gray-100 h-102 w-102 rounded-full  relative  hidden lg:grid  "
             >
-              <div className="absolute right-9 top-24 pt-6 ">
+              <div className="absolute right-9 top-24 pt-6">
                 <a
                   href="whatsapp://send?phone=+971556923201"
                   data-action="share/whatsapp/share"
@@ -185,7 +185,7 @@ export default function Hero() {
       <a
         href="whatsapp://send?phone=+971556923201"
         data-action="share/whatsapp/share"
-        className="animate-ping-slow  fixed flex justify-center items-center w-10 md:w-12 h-10 md:h-12 bottom-8 md:bottom-16 right-10 md:right-16 bg-emerald-500 text-white rounded-full text-center text-2xl md:text-3xl
+        className="animate-bounce  fixed flex justify-center items-center w-10 md:w-12 h-10 md:h-12 bottom-8 md:bottom-16 right-10 md:right-16 bg-emerald-500 text-white rounded-full text-center text-2xl md:text-3xl
       shadow-lg z-50 
       "
       >
