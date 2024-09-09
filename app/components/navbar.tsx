@@ -16,13 +16,13 @@ export default function Navbar() {
         <div className="flex col-span-2 xl:col-span-1   justify-between items-center">
           {/* <p className="text-emerald-500">LOGO</p> */}
           <div className=" h-12 w-16 lg:w-28 lg:h-12  rounded relative  ">
-            <Image
+          <Link href={'/'}  ><Image
               src={'/images/logo-1.png'}
               alt="Best online madrasa English, Dubai madrasa, Noorify madrasa"
               className="object-cover"
               fill
             />
-          </div>
+         </Link> </div>
           {!collapse ? (
             <CiMenuFries
               className="text-teal-600 font-sans text-2xl md:hidden"
