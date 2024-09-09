@@ -38,12 +38,13 @@ module.exports = {
       },
       animation: {
         tooltip_show: 'tooltip_show 1s ease forwards',
+        'ping-slow': 'ping 2s linear infinite',
       }
     },
-  
+      
   variants: {
     extend: {
-      width: ['hover'],
+      width: ['hover'], 
       animation: ['group-hover'],
     },
     },

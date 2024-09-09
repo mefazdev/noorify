@@ -11,7 +11,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { IoMdBusiness } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import Link from "next/link";
-import logo from "../../assets/images/logo.jpeg";
+ 
 import Image from "next/image";
 export default function Footer() {
   return (
@@ -134,13 +134,14 @@ export default function Footer() {
             </div>
           </div>
           <div className="m-auto">
-            <div className="w-10/12 hidden lg:grid">
+            <div className="w-[200px] h-[150px]     relative hidden lg:grid">
               <Image
-                src={logo}
+                src='/images/logo-1.png'
                 alt="Best online Hifz Course, Tajweed Course, Quran Classes, Noorify Quran Class,GCC Quran Learning,Global Quran Academy"
-                className="rounded"
+                className="rounded object-cove"
+                fill
               />
-            </div>
+            </div>   
             {/* <p className="text-emerald-500 font-bold text-3xl">LOGO</p> */}
           </div>
         </div>

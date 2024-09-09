@@ -1,8 +1,10 @@
-import React from "react";
+ 
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Highlight from "@/app/Highlight";
 import { Metadata } from "next";
 import { courses } from "@/app/assets/courses";
+import Course from "./Course";
 export const metadata: Metadata = {
   title: "Courses | Noorify Online Islamic Academy",
   description:
@@ -13,6 +15,8 @@ export const metadata: Metadata = {
 
 export default function page() {
   const data = courses;
+
+
   return (
     <div>
       <div>
@@ -28,50 +32,12 @@ export default function page() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:mt-8">
-            {data.map((d, i) => {
+            {data.map((d ) => {
               const data = JSON.stringify(d);
 
               return (
-                <div
-                  key={i}
-                  className="p-4 mt-4 lg:mt-10  m-auto w-full lg:w-11/12   shadow-lg rounded-md group"
-                >
-                  <div
-                    className="w-full h-60 rounded-md relative"
-                    style={{
-                      backgroundImage: `url(${d.image})`,
-                      backgroundSize: "cover",
-                    }}
-                  >
-                    <div
-                      style={{ background: "rgba(0, 0, 0, 0.68)" }}
-                      className="h-full flex items-center invisible group-hover:visible rounded-md p-6 pt-7 text-md  "
-                    >
-                      <div>
-                        <p className="text-white  -ml-3 transition ease-in  duration-300   group-hover:translate-x-2  ">
-                          {d.description}
-                        </p>
-
-                        {/* <Link href={`/pages/course?data=${data}`}> */}
-                        <Link
-                          href={`/pages/course/${d?.slug}/${d?.description}`}
-                        >
-                          {" "}
-                          <button className="text-white  bg-emerald-500 p-1 px-3 rounded   text-sm w-fit mt-8 transition ease-in  duration-300   group-hover:-translate-y-6">
-                            More Info
-                          </button>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-3 flex justify-between">
-                    <h4 className="text-lg font-semibold"> {d.name}</h4>
-                    <div className="bg-emerald-500 text-white p-1 px-2.5 rounded-lg ">
-                      <p className="text-sm">{d.level}</p>
-                    </div>
-                  </div>
-                </div>
-              );
+               <Course key={d.name} doc={d}/>
+              )
             })}
           </div>
         </div>
@@ -80,3 +46,43 @@ export default function page() {
     </div>
   );
 }
+
+{/* <div
+key={i}
+className="p-4 mt-4 lg:mt-10  m-auto w-full lg:w-11/12   shadow-lg rounded-md group"
+>
+<div
+  className="w-full h-60 rounded-md relative"
+  style={{
+    backgroundImage: `url(${d.image})`,
+    backgroundSize: "cover",
+  }}
+>
+  <div
+    style={{ background: "rgba(0, 0, 0, 0.68)" }}
+    className="h-full flex items-center invisible group-hover:visible rounded-md p-6 pt-7 text-md  "
+  >
+    <div>
+      <p className="text-white  -ml-3 transition ease-in  duration-300   group-hover:translate-x-2  ">
+        {d.description}
+      </p>
+
+     
+      <Link
+        href={`/pages/course/${d?.slug}/${d?.description}`}
+      >
+        {" "}
+        <button className="text-white  bg-emerald-500 p-1 px-3 rounded   text-sm w-fit mt-8 transition ease-in  duration-300   group-hover:-translate-y-6">
+          More Info
+        </button>
+      </Link>
+    </div>
+  </div>
+</div>
+<div className="mt-3 flex justify-between">
+  <h4 className="text-lg font-semibold"> {d.name}</h4>
+  <div className="bg-emerald-500 text-white p-1 px-2.5 rounded-lg ">
+    <p className="text-sm">{d.level}</p>
+  </div>
+</div>
+</div> */}

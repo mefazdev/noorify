@@ -1,6 +1,7 @@
 import { Metadata } from "next";
-import Footer from "./components/Footer"
-import Navbar from "./components/navbar"
+import Navbar from "../components/navbar";
+import Footer from "../components/Footer";
+ 
 
 
 // export const metadata: Metadata = {
@@ -16,7 +17,7 @@ export default function DashboardLayout({
   }) {
     return (
       <section>
-        {/* Include shared UI here e.g. a header or sidebar */}
+     
       <Navbar/> 
    
         {children}

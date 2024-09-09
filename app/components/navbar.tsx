@@ -5,21 +5,22 @@ import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { TfiClose } from "react-icons/tfi";
-import logo from "../../assets/images/logo.jpeg";
+ 
 export default function Navbar() {
   const [collapse, setCollapse] = useState<boolean>(false);
   const pathname = usePathname();
   return (
-    <div className="border-b py-4  font-nunit sticky top-0   shadow-md bg-white z-50 ">
+    <div className="border-b py-3  font-nunit sticky top-0   shadow-md bg-white z-50 ">
       <div className="  w-11/12 m-auto grid lg:grid-cols-3 xl:grid-cols-2 justify-between ">
         {/* LEFT SIDE  */}
         <div className="flex col-span-2 xl:col-span-1   justify-between">
           {/* <p className="text-emerald-500">LOGO</p> */}
-          <div className="w-10 lg:w-14 h-10 rounded ">
+          <div className="w-28 h-12  rounded relative  ">
             <Image
-              src={logo}
+              src={'/images/logo-1.png'}
               alt="Best online madrasa English, Dubai madrasa, Noorify madrasa"
-              className="rounded"
+              className="object-cover"
+              fill
             />
           </div>
           {!collapse ? (
@@ -34,7 +35,7 @@ export default function Navbar() {
             />
           )}
 
-          <div className="hidden md:flex justify-between w-full ml-28 uppercase text-emerald-500 ">
+          <div className="hidden md:flex justify-between items-center     w-full ml-28 uppercase text-emerald-500 ">
             <Link
               href={"/"}
               className={`link ${pathname === "/" ? "font-bold" : ""}`}
@@ -101,12 +102,12 @@ export default function Navbar() {
                 href="whatsapp://send?phone=+971556923201"
                 data-action="share/whatsapp/share"
               >
-                <button className=" border border-emerald-500 rounded-sm px-4 py-1 hover:scale-105  transition ease-linear duration-100 cursor-poin">
-                  Get Free Demo
+                <button className="font-semibold text-lg border border-emerald-500 rounded px-3 py-1 hover:scale-105  transition ease-linear duration-100 cursor-poin">
+                Book a Free Demo
                 </button>
               </a>
               <Link href={"/pages/register"}>
-                <button className="bg-emerald-500   p-1 px-3 rounded-sm text-white ml-4 hover:scale-105  transition ease-linear duration-100 cursor-poin">
+                <button className="bg-emerald-500 text-lg   p-1 px-3 rounded  text-white ml-4 hover:scale-105  transition ease-linear duration-100 cursor-poin">
                   Register Now
                 </button>
               </Link>
@@ -187,7 +188,7 @@ export default function Navbar() {
             href="whatsapp://send?phone=+971556923201"
             data-action="share/whatsapp/share"
           >
-            <p className="mt-2 ">Get Free Demo</p>
+            <p className="mt-2 font-bold">Get Free Demo</p>
           </a>
         </div>
       </div>

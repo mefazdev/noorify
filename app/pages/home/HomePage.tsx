@@ -8,8 +8,8 @@ import Feedback from "./Feedback";
 import RegisterNow from "./RegisterNow";
 import Blog from "./Blog";
 import NewLetter from "./NewLetter";
-import Navbar from "@/app/pages/components/navbar";
-import Footer from "../components/Footer";
+import Navbar from "@/app/components/navbar";
+import Footer from "../../components/Footer";
 
 export default function HomePage() {
   return (

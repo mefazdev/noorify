@@ -12,7 +12,7 @@ export default function Serve() {
       </div>
 
       <div className="grid lg:grid-cols-3 gap-7 lg:gap-10 mt-8 ">
-        <div className="p-4   m-auto lg:w-11/12   shadow-lg rounded-md hover:-translate-y-2 hover:scale-105 transition duration-200 ease-linear">
+       <div data-aos="fade-up-right" > <div  className="p-4   m-auto lg:w-11/12   shadow-lg rounded-md hover:-translate-y-2 hover:scale-105 transition duration-200 ease-linear">
           <div
             className="w-full h-60 rounded-md relative"
             style={{
@@ -34,8 +34,9 @@ export default function Serve() {
               fun-oriented curriculum, convenient time slots, free demo
             </p>
           </div>
-        </div>
-        <div className="p-4 m-auto     lg:w-11/12 shadow-lg rounded-md hover:-translate-y-2 hover:scale-105 transition duration-200 ease-linear">
+        </div></div>
+        <div data-aos="fade-up-right" >
+        <div   className="p-4 m-auto     lg:w-11/12 shadow-lg rounded-md hover:-translate-y-2 hover:scale-105 transition duration-200 ease-linear">
           <div
             className="w-full h-60 rounded-md"
             style={{
@@ -58,8 +59,10 @@ export default function Serve() {
             </p>
           </div>
         </div>
-
-        <div className="p-4 m-auto  lg:w-11/12 shadow-lg rounded-md hover:-translate-y-2 hover:scale-105 transition duration-200 ease-linear">
+        </div>
+<div data-aos="fade-up-right">
+  
+<div  className="p-4 m-auto  lg:w-11/12 shadow-lg rounded-md hover:-translate-y-2 hover:scale-105 transition duration-200 ease-linear">
           <div
             className="w-full h-60 rounded-md"
             style={{
@@ -82,7 +85,9 @@ export default function Serve() {
             </p>
           </div>
         </div>
+</div>
 
+        <div data-aos="fade-up-right" >
         <div className="p-4 m-auto    lg:w-11/12 shadow-lg rounded-md hover:-translate-y-2 hover:scale-105 transition duration-200 ease-linear">
           <div
             className="w-full h-60 rounded-md"
@@ -105,6 +110,7 @@ export default function Serve() {
               focus, Customized Curriculam, Convenient Time Slots
             </p>
           </div>
+        </div>
         </div>
       </div>
     </div>

@@ -18,13 +18,13 @@ export default function RegisterNow() {
           style={{ background: "rgba(0, 0, 0, 0.863)" }}
         >
           <div className="px-5 md:px-0 md:w-10/12 m-auto">
-            <h4 className="text-center text-3xl md:text-5xl font-bold text-white leading-normal">
+            <h4 data-aos="fade-right"  className="text-center text-3xl md:text-5xl font-bold text-white leading-normal">
               Prime Learning Opportunities:
               <br />
               Anytime, Anywhere
             </h4>
 
-            <div className="grid mt-8">
+            <div className="grid mt-8" data-aos="fade-left" >
               <Link href={"/pages/register"} className=" w-fit m-auto">
                 <button className="font-sans   shadow-white bg-emerald-600 py-2 px-5 text-white m-auto hover:rounded hover:-translate-y-2 hover:scale-110 transition ease-linear duration-100">
                   REGISTER NOW

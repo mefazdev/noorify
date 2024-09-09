@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 
 import madrasaE from "../../assets/images/courses/online-madrasa-english.jpg";
 import madrasaM from "../../assets/images/courses/online-madrasa-malayalam.jpg";
@@ -133,9 +133,17 @@ export default function Courses() {
       ],
     },
   ];
+
+  useEffect(() => {
+    import("aos").then((aos) => {
+      aos.init({
+        /* your configuration options */
+      });
+    });
+  }, []);
   return (
-    <div className=" px-4 md:px-0 md:w-10/12 m-auto  pt-10 md:pt-20">
-      <h6 className=" text-xl md:text-3xl font-bold  text-center">
+    <div data-aos="fade-up" className=" px-4 md:px-0 md:w-10/12 m-auto  pt-10 md:pt-20">
+      <h6 className=" text-xl md:text-3xl font-bold  text-center" >
         Popular Courses
       </h6>
       <div className="border-t w-14 border-black m-auto"></div>

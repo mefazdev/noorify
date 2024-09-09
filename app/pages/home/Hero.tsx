@@ -19,7 +19,13 @@ export default function Hero() {
     }, 200);
     return () => clearTimeout(timer);
   }, []);
-
+  useEffect(() => {
+    import("aos").then((aos) => {
+      aos.init({
+        /* your configuration options */
+      });
+    });
+  }, []);
   return (
     <div>
       <div className=" pb-16 md:pb-24  md:pt-9 px-4 md:px-0 relative  ">
@@ -47,12 +53,15 @@ export default function Hero() {
                   </div>
                 </a>
 
-                <a href="" target="_blank">
+                <a   target="_blank">
                   <div className="h-6 w-6 mt-2 bg-emerald-500 rounded-full flex justify-center items-center cursor-pointer hover:-translate-y-1 hover:scale-110 transition ease-linear duration-200">
                     <FaXTwitter className="text-white text-sm" />
                   </div>
                 </a>
-                <a href="https://www.youtube.com/@NoorifyAcademy" target="_blank">
+                <a
+                  href="https://www.youtube.com/@NoorifyAcademy"
+                  target="_blank"
+                >
                   <div className="h-6 w-6  mt-2 bg-emerald-500 rounded-full flex justify-center items-center cursor-pointer hover:-translate-y-1 hover:scale-110 transition ease-linear duration-200">
                     <FaYoutube className="text-white text-sm" />
                   </div>
@@ -89,11 +98,13 @@ export default function Hero() {
               <h2
                 className={
                   view
-                    ? "ml-20 md:ml-9  font-extrabold text-center md:text-left text-xl md:text-2xl  -translate-x-10 transition    ease-linear duration-500 opacity-100"
+                    ? 
+                    "ml-20 md:ml-9  font-extrabold text-center md:text-left text-xl md:text-2xl  -translate-x-10 transition    ease-linear duration-500 opacity-100"
                     : "opacity-0"
                 }
+
+                
               >
-               
                 <span
                   style={{ color: "75, 189, 138" }}
                   className="text-emerald-500 text-4xl md:text-8xl "
@@ -154,15 +165,15 @@ export default function Hero() {
             </div> */}
 
             <div className="  grid lg:grid-cols-2">
-              <div className=" w-56 m-auto md:w-full  z-40 ">
+              <div className=" w-56 m-auto md:w-full  z-40 " data-aos="fade-up">
                 <Image src={img3} alt="" />
               </div>
-              <div className="grid grid-cols-2 lg:grid-cols-1   ">
+              <div className="grid grid-cols-2 lg:grid-cols-1   " data-aos="fade-up">
                 <div className="md:w-full xl:w-72 z-40 m-auto ">
                   <Image src={three} alt="" />
                 </div>
 
-                <div className="md:w-full xl:w-72 z-40 m-auto ">
+                <div className="md:w-full xl:w-72 z-40 m-auto " data-aos="fade-up">
                   <Image src={two} alt="" />
                 </div>
               </div>
@@ -174,7 +185,7 @@ export default function Hero() {
       <a
         href="whatsapp://send?phone=+971556923201"
         data-action="share/whatsapp/share"
-        className="fixed flex justify-center items-center w-10 md:w-12 h-10 md:h-12 bottom-8 md:bottom-16 right-10 md:right-16 bg-emerald-400 text-white rounded-full text-center text-2xl md:text-3xl
+        className="animate-ping-slow  fixed flex justify-center items-center w-10 md:w-12 h-10 md:h-12 bottom-8 md:bottom-16 right-10 md:right-16 bg-emerald-500 text-white rounded-full text-center text-2xl md:text-3xl
       shadow-lg z-50 
       "
       >
