@@ -13,9 +13,9 @@ export default function Navbar() {
     <div className="border-b py-3  font-nunit sticky top-0   shadow-md bg-white z-50 ">
       <div className="  w-11/12 m-auto grid lg:grid-cols-3 xl:grid-cols-2 justify-between ">
         {/* LEFT SIDE  */}
-        <div className="flex col-span-2 xl:col-span-1   justify-between">
+        <div className="flex col-span-2 xl:col-span-1   justify-between items-center">
           {/* <p className="text-emerald-500">LOGO</p> */}
-          <div className="w-28 h-12  rounded relative  ">
+          <div className=" h-12 w-16 lg:w-28 lg:h-12  rounded relative  ">
             <Image
               src={'/images/logo-1.png'}
               alt="Best online madrasa English, Dubai madrasa, Noorify madrasa"

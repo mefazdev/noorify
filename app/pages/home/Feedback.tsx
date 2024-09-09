@@ -118,7 +118,7 @@ export default function Feedback() {
           <a
             href="https://g.co/kgs/tz1qKk4"
             target="_blank"
-            className="w-fit flex items-center gap-1 border p-1 lg:p-2 px-2 lg:px-4 border-emerald-500 rounded hover:bg-emerald-500 hover:text-white transition-all duration-300 ease-linear   "
+            className="w-fit flex items-center gap-1 border p-1 lg:p-2 px-2 lg:px-4 bg-emerald-500 text-white rounded   hover:scale-105 transition-all duration-200 ease-linear   "
           >
             View More
           </a>
