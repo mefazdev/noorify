@@ -11,7 +11,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { IoMdBusiness } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import Link from "next/link";
- 
+
 import Image from "next/image";
 export default function Footer() {
   return (
@@ -20,13 +20,11 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 gap-7">
           <div className="">
             <p>
-              At Noorify, our one-on-one classes make learning about Islam easy
-              for everyone, fitting seamlessly into your schedule, whether
-              you&apos;re a kid or a parent. It&apos;s a wonderful opportunity
-              for anyone worldwide looking to learn about Islamic knowledge
-              online. Join us, and let&apos;s embark on a journey of simple,
-              convenient, and enriching learning, guided by the best teachers in
-              the world, right from the comfort of your own space.
+              At Noorify, our one-on-one classes make learning Islam easy and
+              accessible for everyone, fitting seamlessly into your
+              schedule—whether you&apos;re a child or a parent. We cover key subjects
+              like Quran reading (Tajweed), memorization (Hifz), and the
+              practical understanding of Islamic teachings (Fiqh). Our courses are designed to offer quality education with the convenience of online learning, featuring free demo classes for all courses.
             </p>
 
             <div className="mt-3 flex">
@@ -136,12 +134,12 @@ export default function Footer() {
           <div className="m-auto">
             <div className="w-[200px] h-[150px]     relative hidden lg:grid">
               <Image
-                src='/images/logo-1.png'
+                src="/images/logo-1.png"
                 alt="Best online Hifz Course, Tajweed Course, Quran Classes, Noorify Quran Class,GCC Quran Learning,Global Quran Academy"
                 className="rounded object-cove"
                 fill
               />
-            </div>   
+            </div>
             {/* <p className="text-emerald-500 font-bold text-3xl">LOGO</p> */}
           </div>
         </div>

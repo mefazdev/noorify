@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { TfiClose } from "react-icons/tfi";
-import logo from "../../assets/images/logo.jpeg";
+ 
 import Image from "next/image";
 export default function Navbar() {
   const [collapse, setCollapse] = useState<boolean>(false);
@@ -35,11 +35,13 @@ export default function Navbar() {
     <div className="border-b py-4  font-nunit sticky top-0   shadow-md bg-emerald-500 text-white z-50 ">
       <div className="  w-11/12 m-auto grid lg:grid-cols-3 xl:grid-cols-2 justify-between ">
         <div className="flex col-span-2 xl:col-span-1   justify-between">
-          <div className="w-10 rounded">
+          <div className=" rounded">
             <Image
-              src={logo}
+              src={'/images/logo-1.png'}
               alt="Best online madrasa Malayalam, Dubai madrasa, Noorify madrasa"
               className="rounded"
+              height={80}
+              width={150}
             />
           </div>
           <button
