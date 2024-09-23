@@ -112,7 +112,7 @@ export default function Hero() {
                   Noorify{" "}
                 </span>{" "}
                 <br />
-                Online Islamic Academy
+               Learning Hub
               </h2>
 
               <p
@@ -129,7 +129,7 @@ export default function Hero() {
                   <button
                     className={
                       view
-                        ? "bg-emerald-500 mt-10 md:mt-4 text-white py-1 px-5 rounded-sm  m-auto md:m-0  hover:-translate-y-2  -translate-y-1 transition hover:scale-105 ease-linear duration-150 "
+                        ? "bg-emerald-500 mt-10 md:mt-4 text-white py-2 px-5 rounded-sm font-bold  m-auto md:m-0  hover:-translate-y-2  -translate-y-1 transition hover:scale-105 ease-linear duration-150 "
                         : "opacity-0"
                     }
                   >

@@ -10,19 +10,39 @@ export default function Navbar() {
   const [collapse, setCollapse] = useState<boolean>(false);
   const pathname = usePathname();
   return (
-    <div className="border-b py-3  font-nunit sticky top-0   shadow-md bg-white z-50 ">
+    <div className="border-b py-1  font-nunit sticky top-0   shadow-md bg-white z-50 ">
       <div className="  w-11/12 m-auto grid lg:grid-cols-3 xl:grid-cols-2 justify-between ">
         {/* LEFT SIDE  */}
-        <div className="flex col-span-2 xl:col-span-1   justify-between items-center">
+        <div className="flex col-span-2 xl:col-span-1   justify-between items-center ">
           {/* <p className="text-emerald-500">LOGO</p> */}
-          <div className=" h-12 w-16 lg:w-28 lg:h-12  rounded relative  ">
-          <Link href={'/'}  ><Image
-              src={'/images/logo-1.png'}
+          <div className="  bg-white   rounded-full   justify-center items-center">
+          {/* <div className=" h-12 w-16 lg:w-24 lg:h-20  relative">
+          <Link href={'/'}  >
+          <Image
+              src={'/images/logo-2.png'}
               alt="Best online madrasa English, Dubai madrasa, Noorify madrasa"
-              className="object-cover"
+              className="object-cover border"
               fill
             />
+         </Link> </div> */}
+         <div className="   relative">
+          <Link href={'/'}  >
+          <Image
+              src={'/images/logo-2.png'}
+              alt="Best online madrasa English, Dubai madrasa, Noorify madrasa"
+              className="hidden md:grid"
+             height={70}
+             width={130}
+            />
+            <Image
+              src={'/images/logo-2.png'}
+              alt="Best online madrasa English, Dubai madrasa, Noorify madrasa"
+              className="md:hidden"
+             height={40}
+             width={75}
+            />
          </Link> </div>
+          </div>
           {!collapse ? (
             <CiMenuFries
               className="text-teal-600 font-sans text-2xl md:hidden"
@@ -96,7 +116,7 @@ export default function Navbar() {
 
         {/* <<<<<<<<<<<< RIGHT SIDE >>>>>>>>> */}
         <div className="hidden lg:grid ">
-          <div className=" w-full ">
+          <div className=" w-full flex justify-end  items-center">
             <div className="float-right">
               <a
                 href="whatsapp://send?phone=+971556923201"
