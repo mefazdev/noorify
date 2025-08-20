@@ -107,6 +107,21 @@ export default function Footer() {
                   Register
                 </p>
               </Link>
+               
+               <Link href={"/pages/privacy-policy"}>
+                <p className="mt-2 ease-in duration-100 hover:scale-105 cursor-pointer">
+               Privacy Policy
+                </p>
+              </Link><Link href={"/pages/terms"}>
+                <p className="mt-2 ease-in duration-100 hover:scale-105 cursor-pointer">
+                Terms & Conditions
+                </p>
+              </Link>
+               <Link href={"/pages/data-deletion-request"}>
+                <p className="mt-2 ease-in duration-100 hover:scale-105 cursor-pointer">
+           Data Deletion Request
+                </p>
+              </Link>
             </div>
           </div>
           <div className=" lg:flex justify-center">
