@@ -86,6 +86,16 @@ export default function Navbar() {
               </p>
             </Link>
             <Link
+              href={"/pages/career"}
+              className={`link ${
+                pathname === "/pages/career" ? "font-bold" : ""
+              }`}
+            >
+              <p className="hover:scale-105 mt-1 transition ease-linear duration-100 cursor-pointer">
+                Career
+              </p>
+            </Link>
+            <Link
               href={"/pages/blogs"}
               className={`link ${
                 pathname === "/pages/blogs" ? "font-bold" : ""
@@ -172,6 +182,16 @@ export default function Navbar() {
           >
             <p className="mt-2 " onClick={() => setCollapse(false)}>
               Courses
+            </p>
+          </Link>
+          <Link
+            href={"/pages/career"}
+            className={`link ${
+              pathname === "/pages/career" ? "text-emerald-400" : ""
+            }`}
+          >
+            <p className="mt-2 " onClick={() => setCollapse(false)}>
+              Career
             </p>
           </Link>
           <Link
