@@ -42,7 +42,7 @@ const TermsConditions = () => {
               <div className="flex items-start space-x-3">
                 {/* <span className="w-2 h-2 bg-blue-500 rounded-full mt-2"></span> */}
                 <p className="text-gray-700">
-                <span className='text-blue-500 mr-3'>•</span>     For students under 18, parents/guardians must provide consent and supervise their child's use of our services.
+                <span className='text-blue-500 mr-3'>•</span>     For students under 18, parents/guardians must provide consent and supervise their child&aapos;s use of our services.
                 </p>
               </div>
             </div>
@@ -81,7 +81,7 @@ const TermsConditions = () => {
                 <h4 className="font-semibold text-gray-800 mb-2">Payment Terms:</h4>
                 <ul className="space-y-1 text-gray-600 text-sm">
                   <li>• Fees must be paid in advance to confirm enrollment</li>
-                  <li>• Payment plans may be offered as per Noorify's policies</li>
+                  <li>• Payment plans may be offered as per Noorify&apos;s policies</li>
                 </ul>
               </div>
               <div className="bg-white p-4 rounded-lg border border-orange-200">
@@ -130,7 +130,7 @@ const TermsConditions = () => {
               </div>
               <div className="  p-4 rounded-lg border   border-red-300 bg-red-50">
                 <p className="text-red-700">
-                  <span className="font-semibold">Restrictions:</span> Users may not copy, share, or redistribute Noorify's content without prior written permission.
+                  <span className="font-semibold">Restrictions:</span> Users may not copy, share, or redistribute Noorify&apos;s content without prior written permission.
                 </p>
               </div>
             </div>

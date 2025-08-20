@@ -152,10 +152,10 @@ const PrivacyPolicy = () => {
           <div className="bg-pink-50 rounded-lg p-4 py-6 md:p-6">
             <h2 className="text-xl md:text-2xlfont-semibold text-gray-800 mb-4 flex items-center">
               <MdChildCare className="mr-2 text-pink-600" />
-              6. Children's Privacy
+              6. Children&apos;s Privacy
             </h2>
             <p className="text-gray-700">
-              Our services are designed for children under the supervision of their parents/guardians. Parents are responsible for providing consent and monitoring their child's usage of Noorify.
+              Our services are designed for children under the supervision of their parents/guardians. Parents are responsible for providing consent and monitoring their child&apos;s usage of Noorify.
             </p>
           </div>
 

@@ -35,7 +35,7 @@ const DataDeletionRequest = () => {
               <div className="flex items-start space-x-3">
                 <span className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</span>
                 <p className="text-gray-700">
-                  Send an email to <a href="mailto:support@noorify.com" className="text-blue-600 hover:underline font-medium">support@noorify.com</a> with the subject line: "Data Deletion Request."
+                  Send an email to <a href="mailto:support@noorify.com" className="text-blue-600 hover:underline font-medium">support@noorify.com</a> with the subject line: &quot;Data Deletion Request.&quot;
                 </p>
               </div>
               <div className="flex items-start space-x-3">
