@@ -92,6 +92,11 @@ export default function Footer() {
                   Courses
                 </p>
               </Link>
+              <Link href={"/pages/career"}>
+                <p className="mt-2 ease-in duration-100 hover:scale-105 cursor-pointer">
+                  Career
+                </p>
+              </Link>
               <Link href={"/pages/blogs"}>
                 <p className="mt-2 ease-in duration-100 hover:scale-105 cursor-pointer">
                   Blogs
