@@ -250,6 +250,7 @@
 
 
 'use client'
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { 
   FaGraduationCap, 
@@ -460,9 +461,9 @@ const CareerPage = () => {
                       />
                       <label htmlFor="terms" className="text-sm text-gray-600 cursor-pointer">
                         I agree to the{' '}
-                        <span className="text-blue-600 underline cursor-pointer">
-                          terms and conditions
-                        </span>{' '}
+                        <Link href={'/pages/terms'} className="text-blue-600 underline cursor-pointer">
+                          Terms and Conditions
+                        </Link>{' '}
                         and understand that by applying, I consent to being contacted for recruitment purposes. 
                         I acknowledge that all information provided will be kept confidential and used solely for hiring decisions.
                       </label>
