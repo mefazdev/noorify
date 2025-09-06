@@ -422,7 +422,7 @@ const CareerPage = () => {
               Join Our Team
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're always looking for passionate educators, developers, and innovators who want to make a difference in education
+              We&apos;re always looking for passionate educators, developers, and innovators who want to make a difference in education
             </p>
           </div>
           
@@ -435,7 +435,7 @@ const CareerPage = () => {
                 Ready to Shape the Future of Education?
               </h3>
               <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                Whether you're a teacher, developer, designer, or education enthusiast, we'd love to hear from you. 
+                Whether you&apos;re a teacher, developer, designer, or education enthusiast, we&apos;d love to hear from you. 
                 Follow the steps below to join our mission.
               </p>
             </div>
@@ -528,7 +528,7 @@ const CareerPage = () => {
                       Join WhatsApp Group
                     </button>
                     <p className="text-sm text-gray-500 mt-2">
-                      You'll receive interview notifications and important updates here
+                      You&apos;ll receive interview notifications and important updates here
                     </p>
                   </div>
                 </div>
@@ -537,7 +537,7 @@ const CareerPage = () => {
 
             <div className="text-center mt-8">
               <p className="text-sm text-gray-500">
-                We'll review your application and get back to you within 1-2 weeks through WhatsApp
+                We&apos;ll review your application and get back to you within 1-2 weeks through WhatsApp
               </p>
             </div>
           </div>
