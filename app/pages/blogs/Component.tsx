@@ -38,16 +38,19 @@ export default function Component() {
             return (
               <div
                 key={i}
-                className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-9 border-b pb-8 mt-10"
+                className={`grid ${
+                  d?.image ? "grid-cols-2 lg:grid-cols-3" : "grid-cols-1"
+                } gap-4 lg:gap-9 border-b pb-8 mt-10`}
               >
-                <div className="h-full">
-                  <img
-                    src={d?.image}
-                    alt="Best Islamic ladies course online,Lady quran teacher, Best Online islamic academy, Expert Lady Quran Teacher"
-                  />
-                </div>
-
-                <div className="lg:col-span-2">
+                {d?.image && (
+                  <div className="h-full">
+                    <img
+                      src={d?.image}
+                      alt="Best Islamic ladies course online,Lady quran teacher, Best Online islamic academy, Expert Lady Quran Teacher"
+                    />
+                  </div>
+                )}
+                <div className={d?.image ? "lg:col-span-2" : ""}>
                   <h2 className="font-sans font-semibold lg:font-bold  lg:text-xl  ">
                     {d?.title}
                   </h2>

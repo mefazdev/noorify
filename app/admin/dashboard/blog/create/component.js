@@ -100,7 +100,13 @@ export default function Component() {
         }),
       });
       const { data } = await res.json();
-      uploadPhoto(data?._id);
+      if (img) {
+        uploadPhoto(data?._id);
+      } else {
+        router.push("/admin/dashboard/blog");
+        setUploading(false);
+        setTitle("");
+      }
     } catch (error) {
       setUploading(false);
       alert(error);

@@ -34,21 +34,28 @@ export default function Blog() {
                 key={i}
                 className="p-4  w-full shadow-lg rounded-md  hover:-translate-y-3 transition ease-linear duration-150"
               >
-                <div
-                  className="w-full h-60 rounded-md relative"
-                  style={{
-                    backgroundImage: `url(${d?.image})`,
-                    backgroundSize: "cover",
-                  }}
-                >
-                  <div className="bg-emerald-500 w-fit py-1 px-2 h-fit absolute right-1 bottom-1 rounded">
-                    <p className="text-sm  font-sa text-white">{publishedAt}</p>
+                {d?.image && (
+                  <div
+                    className="w-full h-60 rounded-md relative"
+                    style={{
+                      backgroundImage: `url(${d?.image})`,
+                      backgroundSize: "cover",
+                    }}
+                  >
+                    <div className="bg-emerald-500 w-fit py-1 px-2 h-fit absolute right-1 bottom-1 rounded">
+                      <p className="text-sm  font-sa text-white">
+                        {publishedAt}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                )}
                 <div className="mt-4">
-                  <h4 className="text-lg text-gray-600 font-semibol leading-5 h-11 overflow-hidden  ">
+                  <h4 className="text-lg text-gray-600 font-semibold leading-5 h-11 overflow-hidden  ">
                     {d?.title}
                   </h4>
+                  {!d?.image && (
+                    <p className="text-sm text-gray-400 mt-2">{publishedAt}</p>
+                  )}
 
                   <div className="border-t mt-3  py-2 cursor-pointer bg-white text-emerald-600  transition-colors hover:bg-emerald-500  hover:text-white duration-300 ease-linear ">
                     <Link href={`/pages/blog/${d?.slug}`}>

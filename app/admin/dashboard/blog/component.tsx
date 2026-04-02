@@ -118,7 +118,9 @@ export default function Component() {
           return (
             <div key={i} className="border  mt-10 p-4 lg:p-10">
               <div className="grid gap-7 lg:grid-cols-2 ">
-                <img width={300} src={d?.image} alt={d?.image} />{" "}
+                {d?.image && (
+                  <img width={300} src={d?.image} alt={d?.image} />
+                )}{" "}
                 <div>
                   <div className="flex w-full  ">
                     <div className="bg-gray-100 p-2 w-full">

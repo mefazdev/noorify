@@ -69,13 +69,15 @@ export default async function page({ params }: { params: { slug: string } }) {
           {publishedAt} | Admin
         </h6>
 
-        <div className="mt-10">
-          <img
-            src={post?.image}
-            alt="Best Tajweed Course Online, Quran Classes, Noorify Quran Class,GCC Quran Learning,Global Quran Academy,Global Online quran, Online Tajweed,Lady quran teacher"
-            className="m-auto"
-          />
-        </div>
+        {post?.image && (
+          <div className="mt-10">
+            <img
+              src={post?.image}
+              alt="Best Tajweed Course Online, Quran Classes, Noorify Quran Class,GCC Quran Learning,Global Quran Academy,Global Online quran, Online Tajweed,Lady quran teacher"
+              className="m-auto"
+            />
+          </div>
+        )}
 
         <div
           dangerouslySetInnerHTML={{ __html: post?.content }}
